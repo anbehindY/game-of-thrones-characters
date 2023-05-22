@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import style from '../styles/home.module.css';
 
 const Home = () => (
   <div className="homeContainer">
-    <div className="banner">Game Of Thrones Characters</div>
+    <div className={style.banner} />
     <div className="searchBar">
       <div className="searchLogo">Search</div>
     </div>

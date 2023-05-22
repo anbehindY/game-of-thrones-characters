@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     padding: 2% 3%;
-    /* background-color: rgb(53, 87, 191,0.8); */
     background-color: rgb(15, 15, 15, 0.99);
     align-items: center;
 }
@@ -13,7 +12,6 @@
 }
 
 .title {
-    /* color: rgb(209, 160, 124); */
     color: #969696;
     font-family: 'Gill Sans', sans-serif;
     font-size: 1.2em;  
