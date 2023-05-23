@@ -1,18 +1,19 @@
 .menuContainer {
     display: flex;
     justify-content: space-between;
-    padding: 2% 3%;
-    background-color: rgb(15, 15, 15, 0.99);
+    padding: 0% 4%;
+    background-color: rgba(41, 79, 156, 0.921);
     align-items: center;
 }
 
 .logo {
-    width: 90px;
-    height: 60px;
+    width: 50px;
+    height: 35px;
+    padding: 10px 2%;
 }
 
 .title {
-    color: #969696;
+    color: #fffefee2;
     font-family: 'Gill Sans', sans-serif;
-    font-size: 1.2em;  
+    font-size: 1.1em;
 }
