@@ -1,4 +1,3 @@
-import { FaSearch } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import style from '../styles/details.module.css';
@@ -12,8 +11,7 @@ const Details = () => {
     <div className={style.detailsContainer}>
       <div className={styles.banner} />
       <div className={styles.searchBar}>
-        <FaSearch color="#fff" />
-        <input type="text" placeholder="Search character" className={styles.searchInput} />
+        <p className={style.info}>Characters by their title</p>
       </div>
       <div className={style.charactersContainer}>
         { filteredCharacters.map((character) => (
