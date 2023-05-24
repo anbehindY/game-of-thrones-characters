@@ -1,18 +1,33 @@
 .characters {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 20px;
   align-items: center;
   height: 80px;
   background-color: rgba(41, 79, 156, 0.921);
   color: #fff;
+  padding: 0 2%;
 }
 
-.characters:nth-child(3n+1) {
+.characters:nth-child(2n+1) {
   background-color: rgb(59, 102, 189);
 }
 
 .name {
   font-size: 1.1em;
   font-weight: 500;
-  margin-left: -50px;
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  margin-left: auto;
+}
+
+.info {
+  color: #fff;
+  font-size: 0.8em;
 }
