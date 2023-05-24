@@ -9,7 +9,7 @@ function App() {
       <MenuBar />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:family" element={<Details />} />
       </Routes>
     </>
   );

@@ -36,7 +36,7 @@ const Home = () => {
         {filteredFamilies.map((family) => (
           <div key={family} className={style.card}>
             <div className={style.wrapper}>
-              <Link className={style.goArrow} to={`/details/${family.family}`}>
+              <Link className={style.goArrow} to={`/details/${family}`}>
                 <FaRegArrowAltCircleRight fontSize="1.5rem" color="#fff" />
               </Link>
               <p className={style.text}>
