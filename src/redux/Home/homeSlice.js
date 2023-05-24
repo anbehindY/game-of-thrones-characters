@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const getData = createAsyncThunk('Get/characters', async () => {
+export const getData = createAsyncThunk('Get/characters', async () => {
   const options = {
     method: 'GET',
     url: 'https://game-of-thrones1.p.rapidapi.com/Characters',
@@ -12,7 +12,6 @@ const getData = createAsyncThunk('Get/characters', async () => {
   };
   try {
     const response = await axios.request(options);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     return error;
@@ -20,13 +19,14 @@ const getData = createAsyncThunk('Get/characters', async () => {
 });
 
 const initialState = {
-  houses: [],
+  characters: [],
+  families: [],
   currentPage: 'Home',
   loading: false,
 };
 
 const homeSlice = createSlice({
-  name: 'houses',
+  name: 'characters',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -36,10 +36,14 @@ const homeSlice = createSlice({
       })
       .addCase(getData.fulfilled, (state, { payload }) => {
         state.loading = false;
-        const filteredHouses = payload
+        state.characters = payload;
+        const houses = payload
           .map((character) => character.family)
-          .filter((family, index, self) => self.indexOf(family) === index);
-        state.houses.push(filteredHouses);
+          .filter(
+            (family, index, self) => family.split(' ').length === 2
+              && (self.indexOf(family) === index) && (family !== 'Free Folk') && (family !== 'House Lanister'),
+          );
+        state.families = houses;
       })
       .addCase(getData.rejected, (state, { payload }) => {
         state.loading = false;
