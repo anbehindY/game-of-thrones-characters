@@ -33,6 +33,9 @@ const characterSlice = createSlice({
     setSearchValue: (state, { payload }) => {
       state.searchValue = payload;
     },
+    updateCurrentPage: (state, { payload }) => {
+      state.currentPage = payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -57,5 +60,5 @@ const characterSlice = createSlice({
   },
 });
 
-export const { setSearchValue } = characterSlice.actions;
+export const { setSearchValue, updateCurrentPage } = characterSlice.actions;
 export default characterSlice.reducer;

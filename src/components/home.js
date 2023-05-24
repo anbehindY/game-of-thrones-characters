@@ -3,7 +3,7 @@ import { FaSearch, FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import style from '../styles/home.module.css';
-import { getData, setSearchValue } from '../redux/character/characterSlice';
+import { getData, setSearchValue, updateCurrentPage } from '../redux/character/characterSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const Home = () => {
           <div key={family} className={style.card}>
             <div className={style.wrapper}>
               <Link className={style.goArrow} to={`/details/${family}`}>
-                <FaRegArrowAltCircleRight fontSize="1.5rem" color="#fff" />
+                <FaRegArrowAltCircleRight fontSize="1.5rem" color="#fff" onClick={() => dispatch(updateCurrentPage('Details'))} />
               </Link>
               <p className={style.text}>
                 {family}
