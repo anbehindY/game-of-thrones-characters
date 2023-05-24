@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import homeReducers from './Home/homeSlice';
+import characterReducers from './character/characterSlice';
 
 const store = configureStore({
   reducer: {
-    characters: homeReducers,
+    characters: characterReducers,
   },
 });
 

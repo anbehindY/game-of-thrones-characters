@@ -26,7 +26,7 @@ const initialState = {
   loading: false,
 };
 
-const homeSlice = createSlice({
+const characterSlice = createSlice({
   name: 'characters',
   initialState,
   reducers: {
@@ -57,5 +57,5 @@ const homeSlice = createSlice({
   },
 });
 
-export const { setSearchValue } = homeSlice.actions;
-export default homeSlice.reducer;
+export const { setSearchValue } = characterSlice.actions;
+export default characterSlice.reducer;

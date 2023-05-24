@@ -3,7 +3,7 @@ import { FaSearch, FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import style from '../styles/home.module.css';
-import { getData, setSearchValue } from '../redux/Home/homeSlice';
+import { getData, setSearchValue } from '../redux/character/characterSlice';
 
 const Home = () => {
   const dispatch = useDispatch();
