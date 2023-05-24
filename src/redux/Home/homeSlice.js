@@ -21,6 +21,7 @@ export const getData = createAsyncThunk('Get/characters', async () => {
 const initialState = {
   characters: [],
   families: [],
+  searchValue: '',
   currentPage: 'Home',
   loading: false,
 };
@@ -28,7 +29,11 @@ const initialState = {
 const homeSlice = createSlice({
   name: 'characters',
   initialState,
-  reducers: {},
+  reducers: {
+    setSearchValue: (state, { payload }) => {
+      state.searchValue = payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getData.pending, (state) => {
@@ -52,4 +57,5 @@ const homeSlice = createSlice({
   },
 });
 
+export const { setSearchValue } = homeSlice.actions;
 export default homeSlice.reducer;

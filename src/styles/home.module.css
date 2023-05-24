@@ -25,6 +25,7 @@
   border: none;
   background: none;
   color: #fff;
+  width: 100%;
 }
 
 ::placeholder {
