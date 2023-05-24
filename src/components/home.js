@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import style from '../styles/home.module.css';
 import { getData, setSearchValue, updateCurrentPage } from '../redux/character/characterSlice';
+import Footer from './footer';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ const Home = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
