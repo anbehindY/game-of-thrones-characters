@@ -1,0 +1,70 @@
+.homeContainer {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  height: 200px;
+  background-image: url(../images/GOTbanner2.jpg);
+  background-size: 129%;
+  background-position: 0 90%;
+}
+
+.searchBar {
+  height: 30px;
+  background-color: rgba(24, 52, 107, 0.921);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0.5% 3%;
+}
+
+.searchInput {
+  outline: none;
+  border: none;
+  background: none;
+  color: #fff;
+  width: 100%;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 50%;
+  height: 180px;
+  background-color: rgba(41, 79, 156, 0.921);
+}
+
+.card:nth-child(3n+1) {
+  background-color: rgb(59, 102, 189);
+}
+
+.wrapper {
+  height: 90%;
+  padding: 4% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+}
+
+.text {
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: 'Gill Sans', sans-serif;
+  text-align: right;
+}
+
+.span {
+  font-weight: 300;
+  font-size: 0.7em;
+}
